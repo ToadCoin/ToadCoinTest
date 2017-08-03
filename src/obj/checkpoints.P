@@ -1,0 +1,6 @@
+obj/checkpoints.o: checkpoints.cpp checkpoints.h net.h mruset.h netbase.h \
+ serialize.h allocators.h version.h compat.h protocol.h uint256.h \
+ addrman.h util.h db.h main.h bignum.h script.h base58.h key.h
+checkpoints.cpp checkpoints.h net.h mruset.h netbase.h :
+ serialize.h allocators.h version.h compat.h protocol.h uint256.h :
+ addrman.h util.h db.h main.h bignum.h script.h base58.h key.h :

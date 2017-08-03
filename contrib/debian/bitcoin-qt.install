@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+debian/bin/toadcoin-qt usr/bin
+toadcoin-qt usr/lib/toadcoin
+share/pixmaps/toadcoin32.xpm usr/share/pixmaps
+share/pixmaps/toadcoin80.xpm usr/share/pixmaps
+debian/toadcoin-qt.desktop usr/share/applications
+debian/toadcoin-qt.protocol usr/share/kde4/services/
+=======
+debian/bin/peershares-qt usr/bin
+peershares-qt usr/lib/peershares
+share/pixmaps/peershares32.xpm usr/share/pixmaps
+share/pixmaps/peershares80.xpm usr/share/pixmaps
+debian/peershares-qt.desktop usr/share/applications
+debian/peershares-qt.protocol usr/share/kde4/services/
+>>>>>>> ac6a1f917cac54cb628973f14d13f574a7eafdc7

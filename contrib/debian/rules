@@ -1,0 +1,64 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+<<<<<<< HEAD
+#DEB_MAKE_CHECK_TARGET = test_toadcoin
+#build/toadcoind::
+#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_toadcoin)
+
+DEB_INSTALL_EXAMPLES_toadcoin += debian/examples/*
+DEB_INSTALL_MANPAGES_toadcoin += debian/manpages/*
+=======
+#DEB_MAKE_CHECK_TARGET = test_peershares
+#build/peersharesd::
+#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_peershares)
+
+DEB_INSTALL_EXAMPLES_peershares += debian/examples/*
+DEB_INSTALL_MANPAGES_peershares += debian/manpages/*
+>>>>>>> ac6a1f917cac54cb628973f14d13f574a7eafdc7
+
+%:
+	dh $@
+
+override_dh_auto_build:
+<<<<<<< HEAD
+	cd src; $(MAKE) -f makefile.unix toadcoind
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f toadcoin-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake toadcoin-qt.pro USE_QRCODE=1
+
+override_dh_auto_test:
+	cd src; $(MAKE) -f makefile.unix test_toadcoin
+	src/test_toadcoin
+
+# Ensure wrapper is set executable
+binary-post-install/toadcoind:
+	chmod +x $(cdbs_curdestdir)usr/bin/toadcoind
+binary-post-install/toadcoin-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/toadcoin-qt
+=======
+	cd src; $(MAKE) -f makefile.unix peersharesd
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f peershares-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake peershares-qt.pro USE_QRCODE=1
+
+override_dh_auto_test:
+	cd src; $(MAKE) -f makefile.unix test_peershares
+	src/test_peershares
+
+# Ensure wrapper is set executable
+binary-post-install/peersharesd:
+	chmod +x $(cdbs_curdestdir)usr/bin/peersharesd
+binary-post-install/peershares-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/peershares-qt
+>>>>>>> ac6a1f917cac54cb628973f14d13f574a7eafdc7

@@ -1,0 +1,14 @@
+obj/init.o: init.cpp db.h main.h bignum.h util.h uint256.h netbase.h \
+ serialize.h allocators.h version.h compat.h net.h mruset.h protocol.h \
+ addrman.h script.h base58.h key.h walletdb.h bitcoinrpc.h \
+ json/json_spirit_reader_template.h json/json_spirit_value.h \
+ json/json_spirit_error_position.h json/json_spirit_writer_template.h \
+ json/json_spirit_utils.h init.h wallet.h keystore.h crypter.h \
+ ui_interface.h checkpoints.h
+init.cpp db.h main.h bignum.h util.h uint256.h netbase.h :
+ serialize.h allocators.h version.h compat.h net.h mruset.h protocol.h :
+ addrman.h script.h base58.h key.h walletdb.h bitcoinrpc.h :
+ json/json_spirit_reader_template.h json/json_spirit_value.h :
+ json/json_spirit_error_position.h json/json_spirit_writer_template.h :
+ json/json_spirit_utils.h init.h wallet.h keystore.h crypter.h :
+ ui_interface.h checkpoints.h :

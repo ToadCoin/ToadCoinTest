@@ -1,0 +1,8 @@
+obj/noui.o: noui.cpp ui_interface.h util.h uint256.h netbase.h \
+ serialize.h allocators.h version.h compat.h init.h wallet.h main.h \
+ bignum.h net.h mruset.h protocol.h addrman.h script.h base58.h key.h \
+ keystore.h crypter.h walletdb.h db.h
+noui.cpp ui_interface.h util.h uint256.h netbase.h :
+ serialize.h allocators.h version.h compat.h init.h wallet.h main.h :
+ bignum.h net.h mruset.h protocol.h addrman.h script.h base58.h key.h :
+ keystore.h crypter.h walletdb.h db.h :
